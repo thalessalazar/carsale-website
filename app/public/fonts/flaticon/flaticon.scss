@@ -1,0 +1,29 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?b84f76e5810a83a809760af75e68e0af") format("truetype"),
+url("./flaticon.woff?b84f76e5810a83a809760af75e68e0af") format("woff"),
+url("./flaticon.woff2?b84f76e5810a83a809760af75e68e0af") format("woff2"),
+url("./flaticon.eot?b84f76e5810a83a809760af75e68e0af#iefix") format("embedded-opentype"),
+url("./flaticon.svg?b84f76e5810a83a809760af75e68e0af#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "transmissao-manual": "\f101",
+);
+
+.flaticon-transmissao-manual:before {
+    content: map-get($flaticon-map, "transmissao-manual");
+}
