@@ -1318,27 +1318,44 @@ ul, ol {
 	font-weight: 700;
 }
 
-.car__sidebar {
-	background: #f7f7f7;
+.navbar__sidebar {
+	background: #ffffff;
 	padding: 30px;
 }
 
-.car__search {
+.navbar__group {
 	margin-bottom: 40px;
+    border-bottom: 1px solid #e4e4e4;
+    padding-bottom: 15px;
 }
 
-.car__search h5 {
-	font-size: 20px;
+.navbar__group h5 {
+	font-size: 15px;
 	color: #353535;
-	font-weight: 700;
-	margin-bottom: 15px;
+	font-weight: 600;
+	margin-bottom: 10px;
 }
 
-.car__search form {
+.navbar__group ul {
+    list-style: none;
+}
+
+.navbar__group li a {
+    font-size: 13px;
+    color: #353535;
+    padding-left: 20px;
+}
+
+.navbar__group li a:hover {
+    /* text-decoration: underline; */
+    color: #007bff;
+}
+
+.navbar__group form {
 	position: relative;
 }
 
-.car__search input {
+.navbar__group input {
 	height: 46px;
 	width: 100%;
 	font-size: 15px;
@@ -1349,27 +1366,27 @@ ul, ol {
 	margin-bottom: 10px;
 }
 
-.car__search input::-webkit-input-placeholder {
+.navbar__group input::-webkit-input-placeholder {
 	color: #727171;
 }
 
-.car__search input::-moz-placeholder {
+.navbar__group input::-moz-placeholder {
 	color: #727171;
 }
 
-.car__search input:-ms-input-placeholder {
+.navbar__group input:-ms-input-placeholder {
 	color: #727171;
 }
 
-.car__search input::-ms-input-placeholder {
+.navbar__group input::-ms-input-placeholder {
 	color: #727171;
 }
 
-.car__search input::placeholder {
+.navbar__group input::placeholder {
 	color: #727171;
 }
 
-.car__search button {
+.navbar__group button {
 	font-size: 14px;
 	color: #AAAAB3;
 	position: absolute;
@@ -4073,4 +4090,8 @@ ul, ol {
 		font-size: 24px;
 		width: 100%;
 	}
+}
+
+.car-admin {
+    background: #f7f7f7;
 }

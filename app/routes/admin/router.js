@@ -1,9 +1,8 @@
 import { Router } from "express";
+import Admin from "../../controllers/admin/Admin"
 
 const routes = new Router();
 
-// routes.get("/", (req, res) => {
-//     return res.json("Hello world");
-// });
+routes.get("/admin/", Admin.home);
 
 export default routes;
