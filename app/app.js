@@ -20,9 +20,9 @@ class App {
         this.server.use(express.json());
         this.server.use(express.urlencoded({ extended: false }));
         this.server.use(cookieParser());
+        this.server.use(express.static(path.join(__dirname, "./public")));
         this.server.set("view engine", "ejs");
         this.server.set("views", "app/views");
-        this.server.use(express.static(path.join(__dirname, "public")));
     }
 
     routes() {
