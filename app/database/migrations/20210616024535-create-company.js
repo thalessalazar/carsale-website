@@ -1,7 +1,7 @@
 /* eslint-disable arrow-body-style */
 module.exports = {
     up: async (queryInterface, Sequelize) => {
-        queryInterface.createTable("company", {
+        queryInterface.createTable("companies", {
             id: {
                 type: Sequelize.INTEGER,
                 allowNull: false,
@@ -26,7 +26,7 @@ module.exports = {
                 type: Sequelize.STRING,
                 allowNull: false,
             },
-            CEP: {
+            cep: {
                 type: Sequelize.STRING,
                 allowNull: false,
             },
@@ -55,10 +55,18 @@ module.exports = {
             hours_sunday: {
                 type: Sequelize.STRING,
             },
+            created_at: {
+                type: Sequelize.DATE,
+                allowNull: false,
+            },
+            updated_at: {
+                type: Sequelize.DATE,
+                allowNull: false,
+            },
         });
     },
 
     down: async (queryInterface) => {
-        return queryInterface.dropTable("company");
+        return queryInterface.dropTable("companies");
     },
 };

@@ -23,7 +23,7 @@ class Company extends Model {
                 email: {
                     type: Sequelize.STRING,
                 },
-                CEP: {
+                cep: {
                     type: Sequelize.STRING,
                 },
                 address: {

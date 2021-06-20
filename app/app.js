@@ -3,11 +3,11 @@ import cookieParser from "cookie-parser";
 // import csurf from "csurf";
 import path from "path";
 
-import "./database/index";
-
 import adminRouter from "./routes/admin/router";
 import apiRouter from "./routes/api/router";
 import shopRouter from "./routes/shop/router";
+
+import "./database/index";
 
 class App {
     constructor() {
