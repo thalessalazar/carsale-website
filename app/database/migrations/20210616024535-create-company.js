@@ -5,8 +5,8 @@ module.exports = {
             id: {
                 type: Sequelize.INTEGER,
                 allowNull: false,
-                autoIncrement: false,
-                primaryKey: false,
+                autoIncrement: true,
+                primaryKey: true,
             },
             facebook_user: {
                 type: Sequelize.STRING,
