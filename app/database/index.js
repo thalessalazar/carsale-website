@@ -15,12 +15,12 @@ class Database {
         models.forEach((model) => model.init(this.connection));
     }
 
-    // associate() {
-    //     // eslint-disable-next-line arrow-body-style
-    //     models.forEach((model) => {
-    //         if (model.associate) model.associate(this.connection.models);
-    //     });
-    // }
+    associate() {
+        // eslint-disable-next-line arrow-body-style
+        models.forEach((model) => {
+            if (model.associate) model.associate(this.connection.models);
+        });
+    }
 }
 
 export default new Database();

@@ -11,4 +11,3 @@ routes.put("/api/company/:id", company.Update);
 routes.delete("/api/company/:id", company.Destroy);
 
 export default routes;
-git 
