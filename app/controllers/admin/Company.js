@@ -1,14 +1,33 @@
-import axios from "axios";
+import Company from "../../models/Company";
 
 class CompanyController {
     async Show(req, res, next) {
-        const company = await axios.get("/api/company/2");
+        const companyList = await Company.findAll();
 
-        console.log(company);
+        const company = companyList[0];
 
         return res.render("admin/company", {
             titlePage: "Painel Administrativo",
             breadcumbPage: "Empresa",
+            company,
+        });
+    }
+
+    async Update(req, res, next) {
+        console.log(req.body);
+
+        const company = await Company.findOne({
+            where: {
+                id: req.body.id,
+            },
+        });
+
+        const newCompany = await company.update(req.body);
+
+        return res.render("admin/company", {
+            titlePage: "Painel Administrativo",
+            breadcumbPage: "Empresa",
+            company: newCompany,
         });
     }
 }

@@ -1,6 +1,6 @@
 import express from "express";
 import cookieParser from "cookie-parser";
-// import csurf from "csurf";
+import cors from "cors";
 import path from "path";
 import expressSession from "./middlewares/auth/Sessions";
 
@@ -21,6 +21,7 @@ class App {
         this.server.use(express.json());
         this.server.use(express.urlencoded({ extended: false }));
         this.server.use(cookieParser());
+        this.server.use(cors());
         this.server.use(expressSession);
         this.server.use(express.static(path.join(__dirname, "./public")));
         this.server.set("view engine", "ejs");

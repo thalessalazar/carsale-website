@@ -1,14 +1,15 @@
 import Sequelize from "sequelize";
 import config from "../config/database";
 import Company from "../models/Company";
+import Custommer from "../models/Custommer";
 
-const models = [Company];
+const models = [Company, Custommer];
 
 class Database {
     constructor() {
         this.connection = new Sequelize(config);
         this.init();
-        // this.associate();
+        this.associate();
     }
 
     init() {
