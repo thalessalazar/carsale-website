@@ -1,0 +1,138 @@
+<%- include("../include/imports/head.ejs")  %> 
+<body>
+  <div id="app">
+    <div class="main-wrapper">
+
+    <%- include("../include/components/navbar.ejs")  %> 
+    <%- include("../include/components/navsidebar.ejs")  %> 
+
+    <div class="main-content">
+        <section class="section">
+          <div class="section-header">
+            <div class="section-header-back">
+              <a href="/admin/" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
+            </div>
+            <h1>Sobre a empresa</h1>
+          </div>
+
+          <div class="section-body">
+            <div id="output-status"></div>
+            <div class="row justify-content-center">
+              <div class="col-md-8">
+                <form id="company-form" method="POST" action="/admin/empresa">
+                  <div class="card" id="settings-card">
+                    <div class="card-header">
+                      <h4>Ajuste as informações sobre a empresa</h4>
+                    </div>
+                    <div class="card-body">
+                        <input type="hidden" name="id" class="form-control" value="<%= company.id %>" id="id">
+                      <div class="form-group row align-items-center">
+                        <label for="email" class="form-control-label col-sm-3 text-md-right">E-mail</label>
+                        <div class="col-sm-6 col-md-9">
+                          <input type="text" name="email" class="form-control" value="<%= company.email %>" id="email">
+                        </div>
+                      </div>
+
+                      <div class="form-group row align-items-center">
+                        <label for="facebook_user" class="form-control-label col-sm-3 text-md-right">Facebook</label>
+                        <div class="col-sm-6 col-md-9">
+                          <input type="text" name="facebook_user" class="form-control" value="<%= company.facebook_user %>" id="facebook_user">
+                        </div>
+                      </div>
+
+                      <div class="form-group row align-items-center">
+                        <label for="instagram_user" class="form-control-label col-sm-3 text-md-right">Instagram</label>
+                        <div class="col-sm-6 col-md-9">
+                          <input type="text" name="instagram_user" class="form-control" value="<%= company.instagram_user %>" id="facebook_user">
+                        </div>
+                      </div>
+
+                      <div class="form-group row align-items-center">
+                        <label for="phone" class="form-control-label col-sm-3 text-md-right">Telefones</label>
+                        <div class="col-sm-6 col-md-9">
+                          <input type="text" name="phone" class="form-control" value="<%= company.phone %>" id="phone">
+                        </div>
+                      </div>
+
+                      <div class="form-group row align-items-center">
+                        <label for="cellphone" class="form-control-label col-sm-3 text-md-right">WhatsApp</label>
+                        <div class="col-sm-6 col-md-9">
+                          <input type="text" name="cellphone" class="form-control" value="<%= company.cellphone %>" id="cellphone">
+                          <div class="form-text text-muted">É necessário que seja no formato 55999999999 para que funcione com as funcionalidades do site</div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row align-items-center">
+                        <label for="cep" class="form-control-label col-sm-3 text-md-right">CEP</label>
+                        <div class="col-sm-6 col-md-9">
+                          <input type="text" name="cep" class="form-control" value="<%= company.cep %>" id="cep">
+                        </div>
+                      </div>
+
+                      <div class="form-group row align-items-center">
+                        <label for="address" class="form-control-label col-sm-3 text-md-right">Endereço</label>
+                        <div class="col-sm-6 col-md-9">
+                          <input type="text" name="address" class="form-control" value="<%= company.address %>" id="address">
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label class="form-control-label col-sm-3 mt-3 text-md-right">Missão</label>
+                        <div class="col-sm-6 col-md-9">
+                          <textarea class="form-control codeeditor" rows="10" cols="20" name="mission"><%= company.mission %></textarea>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label class="form-control-label col-sm-3 mt-3 text-md-right">Visão</label>
+                        <div class="col-sm-6 col-md-9">
+                          <textarea class="form-control codeeditor" name="vision"><%= company.vision %></textarea>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label class="form-control-label col-sm-3 mt-3 text-md-right">Valores</label>
+                        <div class="col-sm-6 col-md-9">
+                          <textarea class="form-control codeeditor" name="values"><%= company.values %></textarea>
+                        </div>
+                      </div>
+
+                      <div class="form-group row align-items-center">
+                        <label for="hours_week" class="form-control-label col-sm-3 text-md-right">De Segunda à Sexta</label>
+                        <div class="col-sm-6 col-md-9">
+                          <input type="text" name="hours_week" class="form-control" value="<%= company.hours_week %>" id="hours_week">
+                        </div>
+                      </div>
+
+                      <div class="form-group row align-items-center">
+                        <label for="hours_saturday" class="form-control-label col-sm-3 text-md-right">Aos Sábados</label>
+                        <div class="col-sm-6 col-md-9">
+                          <input type="text" name="hours_saturday" class="form-control" value="<%= company.hours_saturday %>" id="hours_saturday">
+                        </div>
+                      </div>
+
+                      <div class="form-group row align-items-center">
+                        <label for="hours_sunday" class="form-control-label col-sm-3 text-md-right">Aos Domingos</label>
+                        <div class="col-sm-6 col-md-9">
+                          <input type="text" name="hours_sunday" class="form-control" value="<%= company.hours_sunday %>" id="hours_sunday">
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="card-footer bg-whitesmoke text-md-right">
+                      <button class="btn btn-primary" id="save-btn">Salvar Mudanças</button>
+                      <a class="btn btn-secondary" href="/admin/empresa" type="button">Cancelar</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+  		    </div>
+      	</section>
+      </div>
+
+      <%- include("../include/components/footer.ejs")  %> 
+    </div>
+  </div>
+
+  <%- include("../include/imports/end.ejs") %> 

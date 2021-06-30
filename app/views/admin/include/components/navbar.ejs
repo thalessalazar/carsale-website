@@ -1,85 +1,82 @@
- <!-- Offcanvas Menu Begin -->
- <div class="offcanvas-menu-overlay"></div>
- <div class="offcanvas-menu-wrapper">
-
-     <div class="offcanvas__logo">
-         <a href="./index.html"><img src="/img/logo.png" alt=""></a>
-     </div>
-     <div id="mobile-menu-wrap"></div>
-     <div class="offcanvas__widget">
-         <a href="#" class="primary-btn">Anunciar Carro</a>
-     </div>
-     <ul class="offcanvas__widget__add">
-         <li><i class="fa fa-clock-o"></i>Segunda a Sábado 09:00 - 18:00</li>
-         <li><i class="fa fa-envelope-o"></i>contato@revenda.com.br</li>
-     </ul>
-
-     <div class="offcanvas__phone__num">
-         <i class="fa fa-phone"></i>
-         <span>(53) 3245-7789</span>
-     </div>
-     <div class="offcanvas__social">
-         <a href="#"><i class="fa fa-facebook"></i></a>
-         <a href="#"><i class="fa fa-instagram"></i></a>
-     </div>
- </div>
- <!-- Offcanvas Menu End -->
-
- <!-- Header Section Begin -->
- <header class="header">
-     <div class="header__top">
-         <div class="container">
-             <div class="row">
-                 <div class="col-lg-7">
-                     <ul class="header__top__widget">
-                         <li><i class="fa fa-clock-o"></i>Segunda a Sábado 09:00 - 18:00</li>
-                         <li><i class="fa fa-envelope-o"></i> contato@revenda.com.br</li>
-                     </ul>
-                 </div>
-                 <div class="col-lg-5">
-                     <div class="header__top__right">
-                         <div class="header__top__phone">
-                             <i class="fa fa-phone"></i>
-                             <span>(53) 3245-7789</span>
-                         </div>
-                         <div class="header__top__social">
-                             <a href="#"><i class="fa fa-facebook"></i></a>
-                             <a href="#"><i class="fa fa-instagram"></i></a>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </div>
-     <div class="container">
-         <div class="row">
-             <div class="col-lg-2">
-                 <div class="header__logo">
-                     <a href="./index.html"><img src="/img/logo.png" alt=""></a>
-                 </div>
-             </div>
-             <div class="col-lg-10">
-                 <div class="header__nav">
-                     <nav class="header__menu">
-                         <ul>
-                             <li class="active"><a href="./index.html">Ínicio</a></li>
-                             <li><a href="./car.html">Carros</a></li>
-                             <li><a href="#">Institucional</a>
-                                 <ul class="dropdown">
-                                     <li><a href="./about.html">Nossa Empresa</a></li>
-                                     <li><a href="./contact.html">Fale Conosco</a></li>
-                                 </ul>
-                             </li>
-                         </ul>
-                     </nav>
-                     <div class="header__nav__widget">
-                         <a href="#" class="primary-btn">Anunciar carro</a>
-                     </div>
-                 </div>
-             </div>
-         </div>
-         <div class="canvas__open">
-             <span class="fa fa-bars"></span>
-         </div>
-     </div>
- </header>
+<div class="navbar-bg"></div>
+<nav class="navbar navbar-expand-lg main-navbar">
+  <form class="form-inline mr-auto">
+    <ul class="navbar-nav mr-3">
+      <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+      <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
+    </ul>
+  </form>
+  <ul class="navbar-nav navbar-right">
+    <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
+      <div class="dropdown-menu dropdown-list dropdown-menu-right">
+        <div class="dropdown-header">Notifications
+          <div class="float-right">
+            <a href="#">Mark All As Read</a>
+          </div>
+        </div>
+        <div class="dropdown-list-content dropdown-list-icons">
+          <a href="#" class="dropdown-item dropdown-item-unread">
+            <div class="dropdown-item-icon bg-primary text-white">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="dropdown-item-desc">
+              Template update is available now!
+              <div class="time text-primary">2 Min Ago</div>
+            </div>
+          </a>
+          <a href="#" class="dropdown-item">
+            <div class="dropdown-item-icon bg-info text-white">
+              <i class="far fa-user"></i>
+            </div>
+            <div class="dropdown-item-desc">
+              <b>You</b> and <b>Dedik Sugiharto</b> are now friends
+              <div class="time">10 Hours Ago</div>
+            </div>
+          </a>
+          <a href="#" class="dropdown-item">
+            <div class="dropdown-item-icon bg-success text-white">
+              <i class="fas fa-check"></i>
+            </div>
+            <div class="dropdown-item-desc">
+              <b>Kusnaedi</b> has moved task <b>Fix bug header</b> to <b>Done</b>
+              <div class="time">12 Hours Ago</div>
+            </div>
+          </a>
+          <a href="#" class="dropdown-item">
+            <div class="dropdown-item-icon bg-danger text-white">
+              <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <div class="dropdown-item-desc">
+              Low disk space. Let's clean it!
+              <div class="time">17 Hours Ago</div>
+            </div>
+          </a>
+          <a href="#" class="dropdown-item">
+            <div class="dropdown-item-icon bg-info text-white">
+              <i class="fas fa-bell"></i>
+            </div>
+            <div class="dropdown-item-desc">
+              Welcome to Stisla template!
+              <div class="time">Yesterday</div>
+            </div>
+          </a>
+        </div>
+        <div class="dropdown-footer text-center">
+          <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+        </div>
+      </div>
+    </li>
+    <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+      <img alt="image" src="/admin/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+      <div class="d-sm-none d-lg-inline-block">Oi, Thales</div></a>
+      <div class="dropdown-menu dropdown-menu-right">
+        <a href="features-profile.html" class="dropdown-item has-icon">
+          <i class="far fa-user"></i> Meu Perfil
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item has-icon text-danger">
+          <i class="fas fa-sign-out-alt"></i> Sair </a>
+      </div>
+    </li>
+  </ul>
+</nav>  

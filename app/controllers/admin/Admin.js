@@ -1,9 +1,14 @@
 class AdminController {
+    async login(req, res) {
+        return res.render("admin/login");
+    }
+
+    async forgotPassword(req, res) {
+        return res.render("admin/forgotpassword");
+    }
+
     async home(req, res) {
-        return res.render("admin/index", {
-            titlePage: "Painel Administrativo",
-            breadcumbPage: "Ínicio",
-        });
+        return res.render("admin/index");
     }
 }
 

@@ -4,10 +4,6 @@ class Company extends Model {
     static init(sequelize) {
         super.init(
             {
-                id: {
-                    type: Sequelize.INTEGER,
-                    primaryKey: true,
-                },
                 facebook_user: {
                     type: Sequelize.STRING,
                 },

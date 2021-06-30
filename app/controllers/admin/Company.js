@@ -6,9 +6,7 @@ class CompanyController {
 
         const company = companyList[0];
 
-        return res.render("admin/company", {
-            titlePage: "Painel Administrativo",
-            breadcumbPage: "Empresa",
+        return res.render("admin/company/index", {
             company,
         });
     }
