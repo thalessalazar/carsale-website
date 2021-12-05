@@ -1,7 +1,7 @@
-import { Router } from "express";
+import {Router} from "express";
 import shop from "../../controllers/shop/Shop";
 
-const routes = new Router();
+const routes = Router();
 
 routes.get("/", shop.home);
 routes.get("/contato", shop.contact);

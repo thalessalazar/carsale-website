@@ -1,10 +1,10 @@
-import { Router } from "express";
+import {Router} from "express";
 
 import Admin from "../../controllers/admin/Admin";
 import Company from "../../controllers/admin/Company";
 import Custommer from "../../controllers/admin/Custommer";
 
-const routes = new Router();
+const routes = Router();
 
 routes.get("/admin/", Admin.home);
 routes.get("/admin/login", Admin.login);
